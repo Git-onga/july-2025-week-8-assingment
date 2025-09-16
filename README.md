@@ -22,10 +22,15 @@ The schema contains **7 main tables** and supporting logic:
 
 ### 1. `customers`
 Stores customer details.
-```sql
-id INT PK
-full_name VARCHAR(150) NOT NULL
-phone VARCHAR(30) UNIQUE NOT NULL
-email VARCHAR(150)
-address VARCHAR(300)
-created_at TIMESTAMP
+### 2.  `categories`
+Groups menu items into categories.
+### 3.  `menu_items`
+Represents all dishes/drinks/desserts.
+### 4.  `orders`
+Tracks each order placed by a customer.
+### 5. `order_items `
+Links menu items to orders (many-to-many relationship).
+### 6.  `payments`
+Handles payments for orders.
+### 7. `employees (optional)`
+For staff management.
